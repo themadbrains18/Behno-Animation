@@ -2,897 +2,857 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Behno</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Behno</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* section 1 ============================================= */
-        .section1,
-        .section2 {
-            height: 100vh;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
+    /* section 1 ============================================= */
+    .section1,
+    .section2 {
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
 
-        .section1 {
-            background-image: url("./images/bgimage1.png");
-            background: "black";
-        }
+    .section1 {
+      background-image: url("./images/bgimage1.png");
+      background: "black";
+    }
 
-        .pinpoint1 {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .pinpoint1 {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .section2child2 {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0 14px;
-        }
+    .section2child2 {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 14px;
+    }
 
-        .section2child2 .textfor {
-            max-width: 500px;
-        }
+    .section2child2 .textfor {
+      max-width: 500px;
+    }
 
-        .textfor {
-            font-family: Adobe Caslon Pro;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 15.6px;
-            letter-spacing: 0.02em;
-            text-align: center;
-            color: #fff;
-        }
+    .textfor {
+      font-family: Adobe Caslon Pro;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 15.6px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: #fff;
+    }
 
-        .section2 {
-            background-image: url("./images/bgimage2.png");
-            transform: translateY(70px);
-        }
+    .section2 {
+      background-image: url("./images/bgimage2.png");
+      transform: translateY(70px);
+    }
 
-        /* section 2 ============================================= */
+    /* section 2 ============================================= */
 
-        .banner-parent {
-            position: relative;
-        }
+    .banner-parent {
+      position: relative;
+    }
 
-        .heading-text,
-        .heading-text2 {
-            font-weight: 400;
-            font-size: 57px;
-            line-height: 52px;
-            position: absolute;
-            top: 46%;
-            right: 37%;
-            color: white;
-        }
+    .heading-text,
+    .heading-text2 {
+      font-weight: 400;
+      font-size: 57px;
+      line-height: 52px;
+      color: white;
+    }
 
-        .left {
-            height: 100vh;
-            width: 100%;
-            background: url("./images/bggirl1.png");
-            background-position: left;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+    .left {
+      height: 100vh;
+      width: 100%;
+      background: url("./images/bggirl1.png");
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-        .rightside {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2.26px;
-            width: 100%;
-            /* transform: translateX(100%); */
-            background-color: white;
-            position: relative;
-            z-index: 2;
-        }
+    .rightside {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.26px;
+      width: 100%;
+      /* transform: translateX(100%); */
+      background-color: white;
+      position: relative;
+      z-index: 2;
+    }
 
-        .rightside img {
-            width: 100%;
-            height: 100%;
-        }
+    .rightside img {
+      width: 100%;
+      height: 100%;
+    }
 
-        .left,
-        .secleft {
-            position: relative;
-        }
+    .left,
+    .secleft {
+      position: relative;
+    }
 
-        .heading-text-bottom,
-        .heading-text-bottom2 {
-            position: absolute;
-            top: 88%;
-            right: 40%;
-            color: white;
-            font-family: Helvetica Neue;
-            font-size: 21px;
-            font-weight: 700;
-            line-height: 13.64px;
-            letter-spacing: 0.11em;
-            text-align: center;
-        }
+    .heading-text-bottom,
+    .heading-text-bottom2 {
+      color: white;
+      font-family: Helvetica Neue;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 13.64px;
+      letter-spacing: 0.11em;
+      text-align: center;
+      text-wrap: nowrap;
+    }
 
-        /* section 3 ============================================= */
+    /* section 3 ============================================= */
 
-        .video {
-            margin-bottom: -4px;
-        }
+    .video {
+      margin-bottom: -4px;
+    }
 
-        .videoHeading {
-            background-color: #fff;
-            text-align: center;
-            padding: 45px 0;
-            font-family: PP Editorial New;
-            font-size: 35px;
-            font-style: italic;
-            font-weight: 200;
-            line-height: 50.05px;
-            text-align: center;
-            color: #581a1a;
-        }
+    .videoHeading {
+      background-color: #fff;
+      text-align: center;
+      padding: 45px 0;
+      font-family: PP Editorial New;
+      font-size: 35px;
+      font-style: italic;
+      font-weight: 200;
+      line-height: 50.05px;
+      text-align: center;
+      color: #581a1a;
+    }
 
-        /* section 4 ============================================= */
+    /* section 4 ============================================= */
 
-        .section4inner {
-            position: relative;
-        }
+    .section4inner {
+      position: relative;
+    }
 
-        .section4left {
-            height: 100vh;
-            width: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: left;
-            background-image: url("./images/section3.png");
-        }
+    .section4left {
+      height: 100vh;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left;
+      background-image: url("./images/section3.png");
+    }
 
-        /* end */
+    /* end */
 
-        /* section 5 ============================================= */
+    /* section 5 ============================================= */
 
-        .footer {
-            position: relative;
-        }
+    .footer {
+      position: relative;
+    }
 
-        .maisonsec {
-            background-image: url("./images/maison.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 100vh;
-            /* background-attachment: fixed; */
-            position: sticky;
-            top: 0;
-        }
+    .maisonsec {
+      background-image: url("./images/maison.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100vh;
+      /* background-attachment: fixed; */
+      position: sticky;
+      top: 0;
+    }
 
-        .cantant {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            gap: 87px;
-            text-align: center;
-        }
+    .cantant {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      gap: 87px;
+      text-align: center;
+    }
 
-        #text-anim {
-            font-family: PP Editorial New;
-            font-size: 31px;
-            font-style: italic;
-            font-weight: 200;
-            line-height: 44.33px;
-            text-align: center;
-            color: #ffffff;
-        }
+    #text-anim {
+      font-family: PP Editorial New;
+      font-size: 31px;
+      font-style: italic;
+      font-weight: 200;
+      line-height: 44.33px;
+      text-align: center;
+      color: #ffffff;
+    }
 
-        .btn {
-            padding: 7px 25px 7px 25px;
-            background-color: #ffffff;
-            font-family: Adobe Caslon Pro;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 22.8px;
-            letter-spacing: 0.02em;
-            text-align: left;
-            text-decoration: none;
-            color: #000000;
-        }
+    .btn {
+      padding: 7px 25px 7px 25px;
+      background-color: #ffffff;
+      font-family: Adobe Caslon Pro;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.8px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      text-decoration: none;
+      color: #000000;
+    }
 
-        .staggerEffect {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 30px;
-        }
+    .staggerEffect {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
 
-        /* end */
-        .bannerbg {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
+    /* end */
+    .bannerbg {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
 
-        .gridd {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            width: 100%;
-        }
+    .gridd {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      width: 100%;
+    }
 
-        .footer-textcontainer div {
-            display: inline-block;
-        }
+    .footer-textcontainer div {
+      display: inline-block;
+    }
 
-        .layer1,
-        .layer2 {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: black;
-            opacity: 0.4;
-        }
+    .layer1,
+    .layer2 {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: black;
+      opacity: 0.4;
+    }
 
-        .herobaner {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            z-index: 3;
-        }
+    .herobaner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 3;
+    }
 
-        .text-anim {
-            font-family: PP Editorial New;
-            font-size: 31px;
-            font-style: italic;
-            font-weight: 200;
-            line-height: 44.33px;
-            text-align: center;
-            color: #ffffff;
-        }
+    .text-anim {
+      font-family: PP Editorial New;
+      font-size: 31px;
+      font-style: italic;
+      font-weight: 200;
+      line-height: 44.33px;
+      text-align: center;
+      color: #ffffff;
+    }
 
-        @media only screen and (max-width: 1150px) {
+    .scrollingtext,.scrollingtext2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      width: 50%;
+      height: 100vh;
+      margin: 0 auto;
+    }
 
-            .heading-text,
-            .heading-text2 {
-                font-size: 34px;
-                line-height: 60px;
-                /* right: 10%; */
-            }
+    @media only screen and (max-width: 1150px) {
 
-            .heading-text-bottom,
-            .heading-text-bottom2 {
-                font-size: 14px;
-                /* right: 15%; */
-            }
-        }
+      .heading-text,
+      .heading-text2 {
+        font-size: 34px;
+        line-height: 60px;
+      }
 
-        @media only screen and (max-width: 1024px) {
+      .heading-text-bottom,
+      .heading-text-bottom2 {
+        font-size: 14px;
+      }
+    }
 
-            .heading-text,
-            .heading-text-bottom,
-            .heading-text2,
-            .heading-text-bottom2 {
-                right: 0;
-                left: 0;
-                text-align: center;
-            }
-        }
+    @media only screen and (max-width: 1024px) {
 
-        @media only screen and (max-width: 768px) {
-            .left {
-                width: 100%;
-                max-width: 100%;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: top;
-                background-image: url("./images/resbgimg.png");
-            }
+      .heading-text,
+      .heading-text-bottom,
+      .heading-text2,
+      .heading-text-bottom2 {
+        text-align: center;
+      }
+    }
 
-            .baner-parent {
-                position: sticky;
-                top: 0;
-            }
+    @media only screen and (max-width: 768px) {
+      .left {
+        width: 100%;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        background-image: url("./images/resbgimg.png");
+      }
 
-            .section4inner {
-                position: sticky;
-                top: 0;
-            }
+      .baner-parent {
+        position: sticky;
+        top: 0;
+      }
 
-            .section1 {
-                background-image: url("./images/hero1.png");
-            }
+      .section4inner {
+        position: sticky;
+        top: 0;
+      }
 
-            .section2 {
-                background-image: url("./images/hero2.png");
-            }
+      .section1 {
+        background-image: url("./images/hero1.png");
+      }
 
-            .staggerEffect {
-                gap: 20px;
-            }
+      .section2 {
+        background-image: url("./images/hero2.png");
+      }
 
-            .pinpoint1 {
-                margin-top: -8px;
-            }
+      .staggerEffect {
+        gap: 20px;
+      }
 
-            .gridd {
-                grid-template-columns: 0% 100%;
-            }
+      .pinpoint1 {
+        margin-top: -8px;
+      }
 
-            .rightside {
-                width: 100%;
-                transform: translateX(0);
-                gap: 1.26px;
-            }
+      .gridd {
+        grid-template-columns: 0% 100%;
+      }
 
-            .heading-text,
-            .heading-text2 {
-                text-align: center;
-                font-size: 36px;
-            }
+      .rightside {
+        width: 100%;
+        transform: translateX(0);
+        gap: 1.26px;
+      }
 
-            .heading-text-bottom,
-            .heading-text-bottom2 {
-                text-align: center;
-                font-size: 15px;
-                top: 90%;
-                bottom: 10%;
-            }
+      .heading-text,
+      .heading-text2 {
+        text-align: center;
+        font-size: 36px;
+        text-wrap: nowrap;
+      }
 
-            .section4left {
-                height: 100vh;
-                width: 100%;
-                max-width: 100%;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: top;
-                background-image: url("./images/girlimage1.png");
-            }
+      .heading-text-bottom,
+      .heading-text-bottom2 {
+        text-align: center;
+        font-size: 15px;
+      }
 
-            .maisonsec {
-                background-image: url("./images/resfooter.png");
-            }
+      .section4left {
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        background-image: url("./images/girlimage1.png");
+      }
 
-        }
+      .maisonsec {
+        background-image: url("./images/resfooter.png");
+      }
 
-        .power {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
+    }
+
+    .power {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- section 1 ===================================== start -->
-    <section style="overflow: hidden">
-        <div style="position: relative">
-            <div class="section1">
-                <div class="layer1"></div>
-            </div>
+  <!-- section 1 ===================================== start -->
+  <section style="overflow: hidden">
+    <div style="position: relative">
+      <div class="section1">
+        <div class="layer1"></div>
+      </div>
+    </div>
+    <div class="pinpoint1 herobaner">
+      <img src="./images/firstsectext.png" alt="firstsectext" />
+    </div>
+    <div style="position: relative; z-index: 3" class="pinpoint1 herotext">
+      <img src="./images/bhenologo.png" alt="firstsectext" />
+    </div>
+    <div style="position: relative">
+      <div class="section2">
+        <div class="layer2"></div>
+      </div>
+    </div>
+    <div style="position: relative; z-index: 3" class="section2child2">
+      <h2 class="textfor">
+        Every considered detail comes together at our Maison from the
+        tanneries to the thread manufacturers to the artisans constructing our
+        leather objects to our packaging experts and this vast supply chain is
+        enveloped into the Maison de behno family.
+      </h2>
+    </div>
+  </section>
+
+  <!-- section 1 ===================================== end -->
+
+  <!-- section 2 ===================================== start -->
+
+  <section>
+    <div class="parent">
+      <div class="baner-parent">
+        <div class="left">
+          <div class="scrollingtext">
+            <h1 class="heading-text">The epitome of luxury.</h1>
+            <h1 class="heading-text-bottom">SHOP BEHNO SIGNATURES.</h1>
+          </div>
         </div>
-        <div class="pinpoint1 herobaner">
-            <img src="./images/firstsectext.png" alt="firstsectext" />
+      </div>
+      <div class="gridd">
+        <div></div>
+        <div class="rightside imageContainer">
+          <!-- Images will be dynamically added here by JavaScript -->
         </div>
-        <div style="position: relative; z-index: 3" class="pinpoint1 herotext">
-            <img src="./images/bhenologo.png" alt="firstsectext" />
+      </div>
+    </div>
+  </section>
+
+  <!-- section 2 ===================================== end -->
+
+  <!-- section 3 ===================================== start -->
+
+  <section>
+    <div class="videoHeading">Explore the Maison de behno.</div>
+    <video class="video" width="100%" height="100%" poster="images/poster.png" controls>
+      <source src="movie.mp4" type="video/mp4" />
+      <source src="movie.ogg" type="video/ogg" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- section 3 ===================================== end -->
+
+  <!-- section 4 ===================================== start -->
+
+  <section>
+    <div class="section4">
+      <div class="section4inner">
+        <div class="section4left">
+          <div class="scrollingtext2">
+
+            <h1 class="heading-text2">The testament to taste.</h1>
+            <h1 class="heading-text-bottom2">SHOP BEHNO SIGNATURES.</h1>
+          </div>
         </div>
-        <div style="position: relative">
-            <div class="section2">
-                <div class="layer2"></div>
-            </div>
+      </div>
+      <div class="gridd">
+        <div></div>
+        <div class="rightside imageContainer">
+          <!-- Images will be dynamically added here by JavaScript -->
         </div>
-        <div style="position: relative; z-index: 3" class="section2child2">
-            <h2 class="textfor">
-                Every considered detail comes together at our Maison from the
-                tanneries to the thread manufacturers to the artisans constructing our
-                leather objects to our packaging experts and this vast supply chain is
-                enveloped into the Maison de behno family.
-            </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 4 ===================================== end -->
+
+  <!-- section 5=======================================start -->
+  <section class="footer">
+    <div class="maisonsec">
+      <div class="cantant">
+        <div class="footer-textcontainer">
+          <!-- <h1 id="text-anim">Explore leather luxury from the Maison.</h1> -->
+          <div class="text-anim">Explore</div>
+          <div class="text-anim">leather</div>
+          <div class="text-anim">luxury</div>
+          <div class="text-anim">from</div>
+          <div class="text-anim">the</div>
+          <div class="text-anim">Maison</div>
         </div>
-    </section>
-
-    <!-- section 1 ===================================== end -->
-
-    <!-- section 2 ===================================== start -->
-
-    <section>
-        <div class="parent">
-            <div class="baner-parent">
-                <div class="left">
-                    <h1 class="heading-text">The epitome of luxury.</h1>
-                    <h1 class="heading-text-bottom">SHOP BEHNO SIGNATURES.</h1>
-                </div>
-            </div>
-            <div class="gridd">
-                <div></div>
-                <div class="rightside imageContainer">
-                    <!-- Images will be dynamically added here by JavaScript -->
-                </div>
-            </div>
+        <div class="staggerEffect">
+          <div class="animbtn">
+            <a class="btn" href="#">Metallics</a>
+          </div>
+          <div class="animbtn">
+            <a class="btn" href="#">Crossbody bags</a>
+          </div>
+          <div class="animbtn">
+            <a class="btn" href="#">Shoulders bags</a>
+          </div>
+          <div class="animbtn">
+            <a class="btn" href="#">Mini bags</a>
+          </div>
+          <div class="animbtn">
+            <a class="btn" href="#">Embellished</a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+  <!-- section 5=======================================end -->
 
-    <!-- section 2 ===================================== end -->
+  <!-- gsap cdn============================ start -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- gsap cdn  ==============================end -->
 
-    <!-- section 3 ===================================== start -->
-
-    <section>
-        <div class="videoHeading">Explore the Maison de behno.</div>
-        <video class="video" width="100%" height="100%" poster="images/poster.png" controls>
-            <source src="movie.mp4" type="video/mp4" />
-            <source src="movie.ogg" type="video/ogg" />
-            Your browser does not support the video tag.
-        </video>
-    </section>
-
-    <!-- section 3 ===================================== end -->
-
-    <!-- section 4 ===================================== start -->
-
-    <section>
-        <div class="section4">
-            <div class="section4inner">
-                <div class="section4left">
-                    <h1 class="heading-text2">The testament to taste.</h1>
-                    <h1 class="heading-text-bottom2">SHOP BEHNO SIGNATURES.</h1>
-                </div>
-            </div>
-            <div class="gridd">
-                <div></div>
-                <div class="rightside imageContainer">
-                    <!-- Images will be dynamically added here by JavaScript -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- section 4 ===================================== end -->
-
-    <!-- section 5=======================================start -->
-    <section class="footer">
-        <div class="maisonsec">
-            <div class="cantant">
-                <div class="footer-textcontainer">
-                    <!-- <h1 id="text-anim">Explore leather luxury from the Maison.</h1> -->
-                    <div class="text-anim">Explore</div>
-                    <div class="text-anim">leather</div>
-                    <div class="text-anim">luxury</div>
-                    <div class="text-anim">from</div>
-                    <div class="text-anim">the</div>
-                    <div class="text-anim">Maison</div>
-                </div>
-                <div class="staggerEffect">
-                    <div class="animbtn">
-                        <a class="btn" href="#">Metallics</a>
-                    </div>
-                    <div class="animbtn">
-                        <a class="btn" href="#">Crossbody bags</a>
-                    </div>
-                    <div class="animbtn">
-                        <a class="btn" href="#">Shoulders bags</a>
-                    </div>
-                    <div class="animbtn">
-                        <a class="btn" href="#">Mini bags</a>
-                    </div>
-                    <div class="animbtn">
-                        <a class="btn" href="#">Embellished</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- section 5=======================================end -->
-
-    <!-- gsap cdn============================ start -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- gsap cdn  ==============================end -->
-
-    <!-- gsap script =========================== start -->
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.matchMedia({
-            // Desktop
-            "(min-width: 769px)": function () {
-                const tl = gsap
-                    .timeline({
-                        scrollTrigger: {
-                            trigger: ".baner-parent",
-                            scrub: 2,
-                            start: "top top",
-                            end: "100% center",
-                        },
-                    })
-                    .to(
-                        ".baner-parent",
-                        {
-                            position: "sticky",
-                            top: 0,
-                        },
-                        "a"
-                    )
-                    .to(
-                        ".heading-text",
-                        {
-                            right: "52%",
-                            duration: 1,
-                        },
-                        "a"
-                    )
-                    .to(
-                        ".heading-text-bottom",
-                        {
-                            right: "55%",
-                            duration: 1,
-                        },
-                        "a"
-                    );
-
-                // section 4 ================================================================== gsap
-
-                const tl4 = gsap
-                    .timeline({
-                        scrollTrigger: {
-                            trigger: ".section4inner",
-                            scrub: 2,
-                            start: "top top",
-                            end: "100% center",
-                        },
-                    })
-                    .to(
-                        ".section4inner",
-                        {
-                            position: "sticky",
-                            top: 0,
-                        },
-                        "b"
-                    )
-                    .to(
-                        ".heading-text2",
-                        {
-                            right: "52%",
-                            duration: 1,
-                        },
-                        "b"
-                    )
-                    .to(
-                        ".heading-text-bottom2",
-                        {
-                            right: "55%",
-                            duration: 1,
-                        },
-                        "b"
-                    );
-
-                // section 4 ================================================================== gsap
-            },
-
-            "(min-width:1250px)": function () {
-                const tl = gsap
-                    .timeline({
-                        scrollTrigger: {
-                            trigger: ".baner-parent",
-                            scrub: 2,
-                            start: "top top",
-                            end: "100% center",
-                        },
-                    })
-                    .to(
-                        ".heading-text",
-                        {
-                            right: "55%",
-                            duration: 1,
-                        },
-                        "a"
-                    )
-                    .to(
-                        ".heading-text-bottom",
-                        {
-                            right: "60%",
-                            duration: 1,
-                        },
-                        "a"
-                    );
-                const tl4 = gsap
-                    .timeline({
-                        scrollTrigger: {
-                            trigger: ".section4inner",
-                            scrub: 2,
-                            start: "top top",
-                            end: "100% center",
-                        },
-                    })
-                    .to(
-                        ".heading-text2",
-                        {
-                            right: "55%",
-                            duration: 1,
-                        },
-                        "b"
-                    )
-                    .to(
-                        ".heading-text-bottom2",
-                        {
-                            right: "60%",
-                            duration: 1,
-                        },
-                        "b"
-                    );
-            },
-
-            "(max-width: 769px)": function () {
-                const tl = gsap
-                    .timeline({
-                        scrollTrigger: {
-                            trigger: ".left",
-                            start: "top 10%",
-                            end: "bottom center",
-                            scrub: 2,
-                        },
-                    })
-                    .fromTo(
-                        ".left",
-                        {
-                            duration: 0.5,
-                            backgroundSize: "120%",
-                        },
-                        {
-                            backgroundSize: "100%",
-                        },
-                        "a"
-                    )
-                    .to(
-                        ".heading-text",
-                        {
-                            y: -250,
-                            duration: 0.5,
-                            ease: "none",
-                        },
-                        "a"
-                    )
-                    .to(
-                        ".heading-text-bottom",
-                        {
-                            y: -350,
-                            duration: 0.5,
-                            ease: "none",
-                        },
-                        "a"
-                    );
-
-                const tl2 = gsap
-                    .timeline({
-                        scrollTrigger: {
-                            trigger: ".section4left",
-                            start: "top 10%",
-                            end: "bottom center",
-                            scrub: 2,
-                        },
-                    })
-                    .fromTo(
-                        ".section4left",
-                        {
-                            backgroundSize: "110%",
-                        },
-                        {
-                            backgroundSize: "100%",
-                        },
-                        "b"
-                    )
-                    .to(
-                        ".heading-text2",
-                        {
-                            y: -250,
-                            duration: 0.5,
-                            ease: "none",
-                        },
-                        "b"
-                    )
-                    .to(
-                        ".heading-text-bottom2",
-                        {
-                            y: -350,
-                            duration: 0.5,
-                            ease: "none",
-                        },
-                        "b"
-                    );
-            },
-        });
-
-        // section 1================================================================== gsap
-        const tlbanner = gsap.timeline({
+  <!-- gsap script =========================== start -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.matchMedia({
+      // Desktop
+      "(min-width: 769px)": function () {
+        const tl = gsap
+          .timeline({
             scrollTrigger: {
-                trigger: ".section1",
-                scrub: 2,
-                start: "top top",
-                end: "bottom -100%",
-                pin: true,
-                pinSpacing: false,
-                anticipatePin: 1,
+              trigger: ".baner-parent",
+              scrub: 2,
+              start: "top top",
+              end: "100% center",
             },
-        });
-
-        tlbanner.fromTo(
-            ".section1",
+          })
+          .to(
+            ".baner-parent",
             {
-                scale: 1,
+              position: "sticky",
+              top: 0,
             },
+            "a"
+          )
+          .to(
+            ".scrollingtext",
             {
-                scale: 1.2,
-            }
-        );
+              margin: "0",
+              duration: 1,
+            },
+            "a"
+          )
 
-        const t2banner = gsap.timeline({
+        // section 4 ================================================================== gsap
+
+        const tl4 = gsap
+          .timeline({
             scrollTrigger: {
-                trigger: ".section2",
-                scrub: 2,
-                start: "0% 0%",
-                end: "bottom -100%",
-                pin: true,
-                pinSpacing: false,
-                anticipatePin: 1,
+              trigger: ".section4inner",
+              scrub: 2,
+              start: "top top",
+              end: "100% center",
             },
-        });
-
-        t2banner.fromTo(
-            ".section2",
+          })
+          .to(
+            ".section4inner",
             {
-                scale: 1,
+              position: "sticky",
+              top: 0,
             },
+            "b"
+          ).to(
+            ".scrollingtext2",
             {
-                scale: 1.2,
-            }
-        );
+              margin: "0",
+              duration: 1,
+            },
+            "b"
+          )
 
-        gsap.from(".animbtn", {
-            y: 100,
-            duration: 0.5,
-            stagger: 0.2,
-            ease: "sine.out",
+        // section 4 ================================================================== gsap
+      },
+
+
+
+      "(min-width:1250px)": function () {
+        const tl = gsap
+          .timeline({
             scrollTrigger: {
-                trigger: ".staggerEffect",
-                start: "top 80%",
-                end: "bottom 100%",
-                scrub: 2,
+              trigger: ".baner-parent",
+              scrub: 2,
+              start: "top top",
+              end: "100% center",
             },
-        });
+          })
 
-        const section1inner = gsap.timeline({
+        const tl4 = gsap
+          .timeline({
             scrollTrigger: {
-                trigger: ".herotext",
-                scrub: 2,
-                start: "top top",
-                end: "bottom -75%",
-                pin: true,
-                pinSpacing: false,
-                anticipatePin: 1,
+              trigger: ".section4inner",
+              scrub: 2,
+              start: "top top",
+              end: "100% center",
             },
-        });
+          })
+      },
 
-        gsap.fromTo(
-            ".footer-textcontainer div",
+      "(max-width: 769px)": function () {
+        const tl = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".left",
+              start: "top 10%",
+              end: "bottom center",
+              scrub: 2,
+            },
+          })
+          .fromTo(
+            ".left",
             {
-                y: 100,
-                opacity: 0,
+              duration: 0.5,
+              backgroundSize: "120%",
             },
             {
-                y: 0,
-                duration: 0.5,
-                stagger: 0.2,
-                ease: "sine.out",
-                scrollTrigger: {
-                    trigger: ".footer-textcontainer",
-                    start: "top 80%",
-                    end: "bottom 100%",
-                    scrub: 3,
-                },
-                opacity: 1,
-            }
-        );
+              backgroundSize: "100%",
+            },
+            "a"
+          )
+          .to(
+            ".heading-text",
+            {
+              y: -250,
+              duration: 0.5,
+              ease: "none",
+            },
+            "a"
+          )
+          .to(
+            ".heading-text-bottom",
+            {
+              y: -350,
+              duration: 0.5,
+              ease: "none",
+            },
+            "a"
+          );
 
-        // smouth scroll effect
+        const tl2 = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".section4left",
+              start: "top 10%",
+              end: "bottom center",
+              scrub: 2,
+            },
+          })
+          .fromTo(
+            ".section4left",
+            {
+              backgroundSize: "110%",
+            },
+            {
+              backgroundSize: "100%",
+            },
+            "b"
+          )
+          .to(
+            ".heading-text2",
+            {
+              y: -250,
+              duration: 0.5,
+              ease: "none",
+            },
+            "b"
+          )
+          .to(
+            ".heading-text-bottom2",
+            {
+              y: -350,
+              duration: 0.5,
+              ease: "none",
+            },
+            "b"
+          );
+      },
+    });
 
-        gsap.to(".textani", {
-            duration: 2,
-            text: "thank you for waiting",
-            delay: 1,
-        });
+    // section 1================================================================== gsap
+    const tlbanner = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section1",
+        scrub: 2,
+        start: "top top",
+        end: "bottom -100%",
+        pin: true,
+        pinSpacing: false,
+        anticipatePin: 1,
+      },
+    });
 
-        // dynamic image
-        const imageContainers = document.querySelectorAll(".imageContainer");
+    tlbanner.fromTo(
+      ".section1",
+      {
+        scale: 1,
+      },
+      {
+        scale: 1.2,
+      }
+    );
 
-        // Array of image sources
-        const images = [
-            "./images/productimage1.png",
-            "./images/productimage2.png",
-            "./images/productimage3.png",
-            "./images/productimage1.png",
-            "./images/productimage2.png",
-            "./images/productimage3.png",
-            "./images/productimage1.png",
-            "./images/productimage2.png",
-        ];
+    const t2banner = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section2",
+        scrub: 2,
+        start: "0% 0%",
+        end: "bottom -100%",
+        pin: true,
+        pinSpacing: false,
+        anticipatePin: 1,
+      },
+    });
 
-        imageContainers.forEach((imageContainer) => {
-            images.map((src) => {
-                const div = document.createElement("div");
-                const img = document.createElement("img");
-                img.src = src;
-                img.alt = "image";
-                div.appendChild(img);
-                imageContainer.appendChild(div);
-            });
-        });
+    t2banner.fromTo(
+      ".section2",
+      {
+        scale: 1,
+      },
+      {
+        scale: 1.2,
+      }
+    );
 
-        // footer text animation
-        document.addEventListener("DOMContentLoaded", function (event) {
-            animation_text_1("#text-anim");
-        });
+    gsap.from(".animbtn", {
+      y: 100,
+      duration: 0.5,
+      stagger: 0.2,
+      ease: "sine.out",
+      scrollTrigger: {
+        trigger: ".staggerEffect",
+        start: "top 80%",
+        end: "bottom 100%",
+        scrub: 2,
+      },
+    });
 
-        function animation_text_1(element) {
-            var newText = "";
-            var theText = document.querySelector(element);
-            for (i = 0; i < theText.innerText.length; i++) {
-                newText += "<div>";
-                if (theText.innerText[i] == " ") {
-                    newText += "&nbsp;";
-                } else {
-                    newText += theText.innerText[i];
-                }
-                newText += "</div>";
-            }
-            theText.innerHTML = newText;
-            gsap.fromTo(
-                element + " div",
-                {
-                    opacity: 0,
-                    y: 90,
-                },
-                {
-                    duration: 2,
-                    opacity: 1,
-                    y: 0,
-                    stagger: 0.03,
-                    ease: "elastic(1.2, 0.5)",
-                    scrollTrigger: {
-                        trigger: element,
-                        start: "top 70%",
-                        toggleActions: "restart none none reverse",
-                    },
-                }
-            );
+    const section1inner = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".herotext",
+        scrub: 2,
+        start: "top top",
+        end: "bottom -75%",
+        pin: true,
+        pinSpacing: false,
+        anticipatePin: 1,
+      },
+    });
+
+    gsap.fromTo(
+      ".footer-textcontainer div",
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        duration: 0.5,
+        stagger: 0.2,
+        ease: "sine.out",
+        scrollTrigger: {
+          trigger: ".footer-textcontainer",
+          start: "top 80%",
+          end: "bottom 100%",
+          scrub: 3,
+        },
+        opacity: 1,
+      }
+    );
+
+    // smouth scroll effect
+
+    gsap.to(".textani", {
+      duration: 2,
+      text: "thank you for waiting",
+      delay: 1,
+    });
+
+    // dynamic image
+    const imageContainers = document.querySelectorAll(".imageContainer");
+
+    // Array of image sources
+    const images = [
+      "./images/productimage1.png",
+      "./images/productimage2.png",
+      "./images/productimage3.png",
+      "./images/productimage1.png",
+      "./images/productimage2.png",
+      "./images/productimage3.png",
+      "./images/productimage1.png",
+      "./images/productimage2.png",
+    ];
+
+    imageContainers.forEach((imageContainer) => {
+      images.map((src) => {
+        const div = document.createElement("div");
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "image";
+        div.appendChild(img);
+        imageContainer.appendChild(div);
+      });
+    });
+
+    // footer text animation
+    document.addEventListener("DOMContentLoaded", function (event) {
+      animation_text_1("#text-anim");
+    });
+
+    function animation_text_1(element) {
+      var newText = "";
+      var theText = document.querySelector(element);
+      for (i = 0; i < theText.innerText.length; i++) {
+        newText += "<div>";
+        if (theText.innerText[i] == " ") {
+          newText += "&nbsp;";
+        } else {
+          newText += theText.innerText[i];
         }
-    </script>
+        newText += "</div>";
+      }
+      theText.innerHTML = newText;
+      gsap.fromTo(
+        element + " div",
+        {
+          opacity: 0,
+          y: 90,
+        },
+        {
+          duration: 2,
+          opacity: 1,
+          y: 0,
+          stagger: 0.03,
+          ease: "elastic(1.2, 0.5)",
+          scrollTrigger: {
+            trigger: element,
+            start: "top 70%",
+            toggleActions: "restart none none reverse",
+          },
+        }
+      );
+    }
+  </script>
 
-    <!-- gsap script ==================== end  -->
+  <!-- gsap script ==================== end  -->
 </body>
 
 </html>
