@@ -91,7 +91,6 @@
     .rightside {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2.26px;
       width: 100%;
       /* transform: translateX(100%); */
       background-color: white;
@@ -274,7 +273,9 @@
       height: 100vh;
       margin: 0 auto;
     }
-
+.scrollingtext{
+  display: flex;
+}
     @media only screen and (max-width: 1150px) {
 
       .heading-text,
@@ -309,6 +310,18 @@
         background-size: cover;
         background-position: top;
         background-image: url("./images/resbgimg.png");
+      }
+      .btn {
+        max-width: 144px;
+        width: 100%;
+        display: block;
+        min-width: 144px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      .staggerEffect {
+        flex-direction: column;
       }
 
       .baner-parent {
@@ -361,7 +374,6 @@
       .rightside {
         width: 100%;
         transform: translateX(0);
-        gap: 1.26px;
       }
 
       .heading-text,
@@ -416,6 +428,11 @@
       justify-content: center;
       align-items: center;
     }
+    /* .scrollingtext{
+      position: absolute;
+      z-index: 5;
+      top: 0;
+    } */
   </style>
 </head>
 
@@ -456,11 +473,17 @@
     <div class="parent">
       <div class="baner-parent">
         <div class="left">
-          <div class="scrollingtext">
+          <div  class="scrollingtext">
             <h1 class="heading-text">The epitome of luxury.</h1>
             <h1 class="heading-text-bottom">SHOP BEHNO SIGNATURES.</h1>
           </div>
         </div>
+      </div>
+      <div>
+        <!-- <div  class="scrollingtext">
+          <h1 class="heading-text">The epitome of luxury.</h1>
+          <h1 class="heading-text-bottom">SHOP BEHNO SIGNATURES.</h1>
+        </div> -->
       </div>
       <div class="gridd">
         <div></div>
@@ -515,13 +538,13 @@
     <div class="maisonsec">
       <div class="cantant">
         <div class="footer-textcontainer">
-          <!-- <h1 id="text-anim">Explore leather luxury from the Maison.</h1> -->
-          <div class="text-anim">Explore</div>
+          <h1 id="text-anim">Explore leather luxury from the Maison.</h1>
+          <!-- <div class="text-anim">Explore</div>
           <div class="text-anim">leather</div>
           <div class="text-anim">luxury</div>
           <div class="text-anim">from</div>
           <div class="text-anim">the</div>
-          <div class="text-anim">Maison</div>
+          <div class="text-anim">Maison</div> -->
         </div>
         <div class="staggerEffect">
           <div class="animbtn">
@@ -645,9 +668,12 @@
           .timeline({
             scrollTrigger: {
               trigger: ".left",
-              start: "top 10%",
-              end: "bottom center",
-              scrub: 2,
+              start: "20% 20%",
+              end: "bottom -100%",
+              scrub: true,
+              // pin:true,
+              // pinSpacing:false
+              markers:true
             },
           })
           .fromTo(
@@ -660,25 +686,27 @@
               backgroundSize: "100%",
             },
             "a"
-          )
-          .to(
-            ".heading-text",
-            {
-              y: -250,
-              duration: 0.5,
-              ease: "none",
-            },
-            "a"
-          )
-          .to(
-            ".heading-text-bottom",
-            {
-              y: -350,
-              duration: 0.5,
-              ease: "none",
-            },
-            "a"
-          );
+          ).to(".scrollingtext",{
+            y:-1200
+          },"a")
+          // .to(
+          //   ".heading-text",
+          //   {
+          //     y: -1000,
+          //     // duration: 0.5,
+          //     ease: "none",
+          //   },
+          //   "a"
+          // )
+          // .to(
+          //   ".heading-text-bottom",
+          //   {
+          //     y: -1200,
+          //     // duration: 0.5,
+          //     ease: "none",
+          //   },
+          //   "a"
+          // );
 
         const tl2 = gsap
           .timeline({
@@ -699,24 +727,24 @@
             },
             "b"
           )
-          .to(
-            ".heading-text2",
-            {
-              y: -250,
-              duration: 0.5,
-              ease: "none",
-            },
-            "b"
-          )
-          .to(
-            ".heading-text-bottom2",
-            {
-              y: -350,
-              duration: 0.5,
-              ease: "none",
-            },
-            "b"
-          );
+          // .to(
+          //   ".heading-text2",
+          //   {
+          //     y: -250,
+          //     duration: 0.5,
+          //     ease: "none",
+          //   },
+          //   "b"
+          // )
+          // .to(
+          //   ".heading-text-bottom2",
+          //   {
+          //     y: -350,
+          //     duration: 0.5,
+          //     ease: "none",
+          //   },
+          //   "b"
+          // );
       },
     });
 
@@ -845,44 +873,44 @@
       });
     });
 
-    // footer text animation
-    document.addEventListener("DOMContentLoaded", function (event) {
-      animation_text_1("#text-anim");
-    });
+    // // footer text animation
+    // document.addEventListener("DOMContentLoaded", function (event) {
+    //   animation_text_1("#text-anim");
+    // });
 
-    function animation_text_1(element) {
-      var newText = "";
-      var theText = document.querySelector(element);
-      for (i = 0; i < theText.innerText.length; i++) {
-        newText += "<div>";
-        if (theText.innerText[i] == " ") {
-          newText += "&nbsp;";
-        } else {
-          newText += theText.innerText[i];
-        }
-        newText += "</div>";
-      }
-      theText.innerHTML = newText;
-      gsap.fromTo(
-        element + " div",
-        {
-          opacity: 0,
-          y: 90,
-        },
-        {
-          duration: 2,
-          opacity: 1,
-          y: 0,
-          stagger: 0.03,
-          ease: "elastic(1.2, 0.5)",
-          scrollTrigger: {
-            trigger: element,
-            start: "top 70%",
-            toggleActions: "restart none none reverse",
-          },
-        }
-      );
-    }
+    // function animation_text_1(element) {
+    //   var newText = "";
+    //   var theText = document.querySelector(element);
+    //   for (i = 0; i < theText.innerText.length; i++) {
+    //     newText += "<div>";
+    //     if (theText.innerText[i] == " ") {
+    //       newText += "&nbsp;";
+    //     } else {
+    //       newText += theText.innerText[i];
+    //     }
+    //     newText += "</div>";
+    //   }
+    //   theText.innerHTML = newText;
+    //   gsap.fromTo(
+    //     element + " div",
+    //     {
+    //       opacity: 0,
+    //       y: 90,
+    //     },
+    //     {
+    //       duration: 2,
+    //       opacity: 1,
+    //       y: 0,
+    //       stagger: 0.03,
+    //       ease: "elastic(1.2, 0.5)",
+    //       scrollTrigger: {
+    //         trigger: element,
+    //         start: "top 70%",
+    //         toggleActions: "restart none none reverse",
+    //       },
+    //     }
+    //   );
+    // }
   </script>
 
   <!-- gsap script ==================== end  -->
