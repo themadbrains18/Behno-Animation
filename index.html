@@ -15,69 +15,70 @@
 
     /* section 1 css */
     .imagebox {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-        }
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
 
-        .bgimageone {
-            background-image: url('./images/bgimage1.jpg');
-            z-index: 1;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
+    .bgimageone {
+      background-image: url('./images/bgimage1.jpg');
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
 
-        .bgimagetwo {
-            background-image: url('./images/bgimage2.jpg');
-            z-index: 2;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .bgimagetwo {
+      background-image: url('./images/bgimage2.jpg');
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .logobox {
-            height: 100vh;
-            position: relative;
-            z-index: 2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .logobox {
+      height: 100vh;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .textbox {
-            height: 100vh;
-            position: relative;
-            z-index: 2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .textbox {
+      height: 100vh;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .textbox p {
-            font-family: Adobe Caslon Pro;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 15.6px;
-            letter-spacing: 0.02em;
-            text-align: center;
-            color: #fff;
-        }
+    .textbox p {
+      font-family: Adobe Caslon Pro;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 15.6px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: #fff;
+    }
 
-        .section {
-            overflow: hidden;
-        }
+    .section {
+      overflow: hidden;
+    }
+
     /* section 1 css */
 
     /* section 2 ============================================= */
@@ -107,8 +108,8 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       width: 100%;
-      /* transform: translateX(100%); */
-      background-color: white;
+      background-color: #F0F1F4;
+      backdrop-filter: blur(100px);
       position: relative;
       z-index: 2;
     }
@@ -350,7 +351,7 @@
       }
 
 
-   
+
 
       .staggerEffect {
         gap: 20px;
@@ -377,6 +378,7 @@
         text-align: center;
         font-size: 15px;
       }
+
       .section4left {
         height: 100vh;
         width: 100%;
@@ -403,32 +405,32 @@
       justify-content: center;
       align-items: center;
     }
-
   </style>
 </head>
 
 <body>
   <section class="section">
     <div class="imagebox">
-        <div class="bgimageone">
-        </div>
-        <div class="bgimagetwo">
-        </div>
-    </div> 
-    <div style="display: flex; justify-content: center; align-items: center; position:absolute ; top: 0; height: 100vh; width: 100%;" >
-        
-        <img src="./images/firstsectext.png" alt="firstsectext">
+      <div class="bgimageone">
+      </div>
+      <div class="bgimagetwo">
+      </div>
+    </div>
+    <div
+      style="display: flex; justify-content: center; align-items: center; position:absolute ; top: 0; height: 100vh; width: 100%;">
+
+      <img src="./images/firstsectext.png" alt="firstsectext">
     </div>
 
     <div class="logobox">
-        <img src="./images/bhenologo.png" alt="logo">
+      <img src="./images/bhenologo.png" alt="logo">
     </div>
     <div class="textbox">
-        <p style="max-width: 400px; text-align: center;">Every considered detail comes together at our Maison – from
-            the tanneries to the thread manufacturers to the artisans constructing our leather objects to our
-            packaging experts – and this vast supply chain is enveloped into the Maison de behno family. </p>
+      <p style="max-width: 400px; text-align: center;">Every considered detail comes together at our Maison – from
+        the tanneries to the thread manufacturers to the artisans constructing our leather objects to our
+        packaging experts – and this vast supply chain is enveloped into the Maison de behno family. </p>
     </div>
-</section>
+  </section>
 
   <!-- section 1 ===================================== end -->
 
@@ -537,49 +539,62 @@
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.timeline({
-            scrollTrigger: {
-                trigger: ".imagebox",
-                start: "top 0%",
-                end: "bottom -100%",
-                pin: true,
-                pinSpacing: false,
-                scrub: 3
-            }
-        }).
-            to(".imagebox", {
-                scale: 1.2
-            })
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: ".logobox",
-                start: "top top",
-                end: "bottom top",
-                pin: true,
-                pinSpacing: false,
-                scrub: 3
-            }
-        }).fromTo(".bgimagetwo", {
-            opacity: 1
-        }, {
-            opacity: 0,
-            duration: 0.5
-        })
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: ".textbox",
-                start: "70% 90%",
-                end: "bottom bottom",
-                scrub: true,
-                pin: true,
-                pinSpacing: false,
-            }
-        })
+      scrollTrigger: {
+        trigger: ".imagebox",
+        start: "top 0%",
+        end: "bottom -100%",
+        pin: true,
+        pinSpacing: false,
+        scrub: 3
+      }
+    }).
+      to(".imagebox", {
+        scale: 1.2
+      })
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".logobox",
+        start: "top top",
+        end: "bottom top",
+        pin: true,
+        pinSpacing: false,
+        scrub: 3,
+      },
+    }),
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".textbox",
+          start: "top 30%",
+          end: "100% 100%",
+          pin: true,
+           pinSpacing: false,
+          scrub: 3,
+
+        }
+      }).fromTo(".bgimagetwo", {
+        opacity: 1
+      }, {
+        opacity: 0,
+        duration: 0.5
+      })
+
+
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: ".textbox",
+    //     start: "70% 90%",
+    //     end: "bottom bottom",
+    //     scrub: true,
+    //     pin: true,
+    //     pinSpacing: false,
+    //     markers:true
+
+    //   }
+    // })
 
 
     ScrollTrigger.matchMedia({
       // Desktop
-
-      
 
       "(min-width: 769px)": function () {
         const tl = gsap
