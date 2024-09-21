@@ -73,6 +73,7 @@
       letter-spacing: 0.02em;
       text-align: center;
       color: #fff;
+      padding: 0 14px;
     }
 
     .section {
@@ -93,6 +94,7 @@
       font-size: 57px;
       line-height: 52px;
       color: white;
+      text-wrap: nowrap;
     }
 
     .left {
@@ -185,7 +187,6 @@
       background-position: center;
       width: 100%;
       height: 100vh;
-      /* background-attachment: fixed; */
       position: sticky;
       top: 0;
     }
@@ -350,8 +351,19 @@
         padding: 13px 0;
       }
 
+      .bgimageone {
+        background: url("./images/hero1.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-
+      .bgimagetwo {
+        background: url("./images/hero2.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
       .staggerEffect {
         gap: 20px;
@@ -426,7 +438,7 @@
       <img src="./images/bhenologo.png" alt="logo">
     </div>
     <div class="textbox">
-      <p style="max-width: 400px; text-align: center;">Every considered detail comes together at our Maison – from
+      <p style="max-width: 400px; text-align: center; ">Every considered detail comes together at our Maison – from
         the tanneries to the thread manufacturers to the artisans constructing our leather objects to our
         packaging experts – and this vast supply chain is enveloped into the Maison de behno family. </p>
     </div>
@@ -567,7 +579,7 @@
           start: "top 30%",
           end: "100% 100%",
           pin: true,
-           pinSpacing: false,
+          pinSpacing: false,
           scrub: 3,
 
         }
