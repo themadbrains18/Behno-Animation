@@ -687,7 +687,7 @@
             },
             "a"
           ).to(".scrollingtext",{
-            y:-1200
+            y:-1000
           },"a")
           // .to(
           //   ".heading-text",
@@ -712,9 +712,9 @@
           .timeline({
             scrollTrigger: {
               trigger: ".section4left",
-              start: "top 10%",
-              end: "bottom center",
-              scrub: 2,
+              start: "20% 20%",
+              end: "bottom -100%",
+              scrub: true,
             },
           })
           .fromTo(
@@ -726,7 +726,9 @@
               backgroundSize: "100%",
             },
             "b"
-          )
+          ).to(".scrollingtext2",{
+            y:-1000
+          },"b")
           // .to(
           //   ".heading-text2",
           //   {
