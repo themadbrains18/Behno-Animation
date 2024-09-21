@@ -95,6 +95,7 @@
       line-height: 52px;
       color: white;
       text-wrap: nowrap;
+      padding-top: 30%;
     }
 
     .left {
@@ -110,10 +111,12 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       width: 100%;
-      background-color: #F0F1F4;
       backdrop-filter: blur(100px);
       position: relative;
       z-index: 2;
+      background-image: linear-gradient(rgb(240 241 244), rgb(240 241 244));
+      background-color: #F0F1F4;
+      backdrop-filter: blur(100px);
     }
 
     .rightside img {
@@ -211,6 +214,11 @@
       color: #ffffff;
     }
 
+    .heading-text2-res {
+      display: none;
+
+    }
+
     .btn {
       padding: 7px 25px 7px 25px;
       background-color: #ffffff;
@@ -276,6 +284,23 @@
       display: flex;
     }
 
+    .power {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .scrollingtext-res-section2 {
+      display: none;
+    }
+
+
+
     @media only screen and (max-width: 1150px) {
 
       .heading-text,
@@ -310,6 +335,64 @@
         background-size: cover;
         background-position: top;
         background-image: url("./images/resbgimg.png");
+      }
+
+
+      .scrollingtext {
+        display: none;
+      }
+
+      .scrollingtext2 {
+        display: none;
+      }
+
+      .heading-text-res-section2 {
+        padding-bottom: 134px;
+        font-family: Adobe Caslon Pro;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 32.76px;
+        text-align: center;
+
+      }
+
+      .heading-text-bottom-res-section2 {
+        font-family: Helvetica Neue;
+        font-size: 14.99px;
+        font-weight: 700;
+        line-height: 13.64px;
+        letter-spacing: 0.11em;
+        text-align: center;
+      }
+
+      .scrollingtext-res-section2 {
+        display: flex;
+        flex-direction: column;
+        gap: 123px;
+        position: relative;
+        z-index: 9;
+        color: #ffffff;
+        padding-bottom: 45px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+
+      .heading-text2 {
+        display: none;
+      }
+
+      .heading-text2-res {
+        display: block;
+        font-size: 34px;
+        line-height: 60px;
+        font-weight: 400;
+        font-size: 57px;
+        line-height: 52px;
+        color: white;
+        text-wrap: nowrap;
+        padding-top: 30%;
       }
 
       .btn {
@@ -406,17 +489,6 @@
       }
 
     }
-
-    .power {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
   </style>
 </head>
 
@@ -462,8 +534,15 @@
       </div>
       <div class="gridd">
         <div></div>
-        <div class="rightside imageContainer">
-          <!-- Images will be dynamically added here by JavaScript -->
+        <div>
+          <div style="height: fit-content">
+            <div class="scrollingtext-res-section2">
+              <h1 class="heading-text-res-section2">The epitome of luxury.</h1>
+              <h1 class="heading-text-bottom-res-section2">SHOP BEHNO SIGNATURES.</h1>
+            </div>
+          </div>
+          <div class="rightside imageContainer">
+          </div>
         </div>
       </div>
     </div>
@@ -491,16 +570,23 @@
       <div class="section4inner">
         <div class="section4left">
           <div class="scrollingtext2">
-
             <h1 class="heading-text2">The testament to taste.</h1>
+            <h1 class=" heading-text2 heading-text2-res">The testament to taste.</h1>
             <h1 class="heading-text-bottom2">SHOP BEHNO SIGNATURES.</h1>
           </div>
         </div>
       </div>
       <div class="gridd">
         <div></div>
-        <div class="rightside imageContainer">
-          <!-- Images will be dynamically added here by JavaScript -->
+        <div>
+          <div style="height: fit-content">
+            <div class="scrollingtext-res-section2">
+              <h1 class="heading-text-res-section2">The testament to taste.</h1>
+              <h1 class="heading-text-bottom-res-section2">SHOP BEHNO SIGNATURES.</h1>
+            </div>
+          </div>
+          <div class="rightside imageContainer">
+          </div>
         </div>
       </div>
     </div>
