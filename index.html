@@ -45,7 +45,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index:1;
+      z-index: 1;
     }
 
     .logobox {
@@ -522,7 +522,6 @@
 
     <div class="logobox">
       <img src="./images/bhenologo.png" alt="logo">
-      <div style="height: 500px;"></div>
     </div>
     <div class="textbox">
       <div style="height: 500px;"></div>
@@ -550,7 +549,7 @@
       </div>
       <div class="gridd">
         <div></div>
-        <div  style="position: relative; z-index: 10;" >
+        <div style="position: relative; z-index: 10;">
           <div style="height: fit-content">
             <div class="scrollingtext-res-section2">
               <h1 class="heading-text-res-section2">The epitome of luxury.</h1>
@@ -673,11 +672,12 @@
     gsap.timeline({
       scrollTrigger: {
         trigger: ".logobox",
-        start: "50% 80%",
+        start: "top  80%",
         end: "bottom top",
         pin: true,
         pinSpacing: false,
         scrub: true,
+        markers: true
       }
     }).fromTo(".bgimagetwo", {
       opacity: 0,
