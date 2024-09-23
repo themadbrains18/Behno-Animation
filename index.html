@@ -14,6 +14,7 @@
 
 
     /* section 1 css */
+
     .imagebox {
       position: relative;
       width: 100%;
@@ -22,7 +23,6 @@
 
     .bgimageone {
       background-image: url('./images/bgimage1.jpg');
-      z-index: 1;
       background-repeat: no-repeat;
       background-size: cover;
       position: absolute;
@@ -34,7 +34,6 @@
 
     .bgimagetwo {
       background-image: url('./images/bgimage2.jpg');
-      z-index: 2;
       background-repeat: no-repeat;
       background-size: cover;
       position: absolute;
@@ -53,6 +52,7 @@
       z-index: 2;
       display: flex;
       justify-content: center;
+      flex-direction: column;
       align-items: center;
     }
 
@@ -63,6 +63,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
 
     .textbox p {
@@ -73,7 +74,6 @@
       letter-spacing: 0.02em;
       text-align: center;
       color: #fff;
-      padding: 0 14px;
     }
 
     .section {
@@ -502,15 +502,16 @@
     </div>
     <div
       style="display: flex; justify-content: center; align-items: center; position:absolute ; top: 0; height: 100vh; width: 100%;">
-
       <img src="./images/firstsectext.png" alt="firstsectext">
     </div>
 
     <div class="logobox">
       <img src="./images/bhenologo.png" alt="logo">
+      <div style="height: 500px;"></div>
     </div>
     <div class="textbox">
-      <p style="max-width: 400px; text-align: center; ">Every considered detail comes together at our Maison – from
+      <div style="height: 500px;"></div>
+      <p style="max-width: 400px; text-align: center;">Every considered detail comes together at our Maison – from
         the tanneries to the thread manufacturers to the artisans constructing our leather objects to our
         packaging experts – and this vast supply chain is enveloped into the Maison de behno family. </p>
     </div>
@@ -636,6 +637,11 @@
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
+
+
+
+
+
     gsap.timeline({
       scrollTrigger: {
         trigger: ".imagebox",
@@ -643,7 +649,7 @@
         end: "bottom -100%",
         pin: true,
         pinSpacing: false,
-        scrub: 3
+        scrub: true
       }
     }).
       to(".imagebox", {
@@ -652,43 +658,49 @@
     gsap.timeline({
       scrollTrigger: {
         trigger: ".logobox",
-        start: "top top",
+        start: "50% 80%",
         end: "bottom top",
         pin: true,
         pinSpacing: false,
-        scrub: 3,
-      },
-    }),
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".textbox",
-          start: "top 30%",
-          end: "100% 100%",
-          pin: true,
-          pinSpacing: false,
-          scrub: 3,
-
-        }
-      }).fromTo(".bgimagetwo", {
-        opacity: 1
-      }, {
-        opacity: 0,
-        duration: 0.5
-      })
+        scrub: true,
+      }
+    }).fromTo(".bgimagetwo", {
+      opacity: 0,
+      delay: 0.8
+    }, {
+      opacity: 1,
+      scale: 1.2
+    }, ">").fromTo(".bgimageone", {
+      opacity: 1,
+      delay: 0.8
+    }, {
+      opacity: 0,
+      scale: 1.2
+    }, ">")
 
 
-    // gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: ".textbox",
-    //     start: "70% 90%",
-    //     end: "bottom bottom",
-    //     scrub: true,
-    //     pin: true,
-    //     pinSpacing: false,
-    //     markers:true
 
-    //   }
-    // })
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".textbox",
+        start: "20% bottom",
+        end: "20% bottom",
+        scrub: true,
+        pin: true,
+        pinSpacing: false,
+      }
+    })
+
+
+
+
+
+
+
+
+
+
+
 
 
     ScrollTrigger.matchMedia({
