@@ -342,7 +342,6 @@
         background-image: url("./images/resbgimg.png");
       }
 
-
       .section4left {
         height: 100vh;
         width: 100%;
@@ -504,6 +503,16 @@
       }
 
     }
+
+    @media screen and (max-width : 320px) {
+      .firstsectext {
+        transform: scale(0.8);
+      }
+
+      .textbox p {
+        padding-bottom: 30px;
+      }
+    }
   </style>
 </head>
 
@@ -517,7 +526,7 @@
     </div>
     <div
       style="display: flex; justify-content: center; align-items: center; position:absolute ; top: 0; height: 100vh; width: 100%;">
-      <img src="./images/firstsectext.png" alt="firstsectext">
+      <img src="./images/firstsectext.png" class="firstsectext" alt=" firstsectext">
     </div>
 
     <div class="logobox">
