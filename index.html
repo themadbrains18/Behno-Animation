@@ -30,6 +30,7 @@
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: 1;
     }
 
     .bgimagetwo {
@@ -44,6 +45,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index:1;
     }
 
     .logobox {
@@ -251,6 +253,8 @@
       display: grid;
       grid-template-columns: 50% 50%;
       width: 100%;
+      position: relative;
+      z-index: 2;
     }
 
     .footer-textcontainer div {
@@ -329,12 +333,24 @@
 
     @media only screen and (max-width: 768px) {
       .left {
+        height: 100vh;
         width: 100%;
         max-width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
         background-image: url("./images/resbgimg.png");
+      }
+
+
+      .section4left {
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        background-image: url("./images/girlimage1.png");
       }
 
       .textbox {
@@ -379,6 +395,8 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        padding-right: 13px;
+        padding-left: 14px;
       }
 
 
@@ -479,15 +497,7 @@
         font-size: 15px;
       }
 
-      .section4left {
-        height: 100vh;
-        width: 100%;
-        max-width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
-        background-image: url("./images/girlimage1.png");
-      }
+
 
       .maisonsec {
         background-image: url("./images/resfooter.png");
@@ -697,20 +707,8 @@
     })
 
 
-
-
-
-
-
-
-
-
-
-
-
     ScrollTrigger.matchMedia({
       // Desktop
-
       "(min-width: 769px)": function () {
         const tl = gsap
           .timeline({
@@ -805,16 +803,16 @@
           .fromTo(
             ".left",
             {
-              duration: 0.5,
               backgroundSize: "120%",
             },
             {
               backgroundSize: "100%",
             },
             "a"
-          ).to(".scrollingtext", {
-            y: -1100
-          }, "a")
+          )
+        // .to(".scrollingtext", {
+        //   y: -1100
+        // }, "a")
 
         const tl2 = gsap
           .timeline({
@@ -834,9 +832,10 @@
               backgroundSize: "100%",
             },
             "b"
-          ).to(".scrollingtext2", {
-            y: -1100
-          }, "b")
+          )
+        // .to(".scrollingtext2", {
+        //   y: -1100
+        // }, "b")
       },
     });
 
