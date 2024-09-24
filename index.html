@@ -262,7 +262,7 @@
       display: grid;
       grid-template-columns: 50% 50%;
       width: 100%;
-      position: relative; 
+      position: relative;
       z-index: 10;
     }
 
@@ -553,11 +553,11 @@
     </div>
   </section>
 
-  
+
 
   <!-- section 2 ===================================== end -->
 
-  
+
   <section>
     <div class="section4">
       <div class="section4inner">
@@ -733,7 +733,7 @@
       ScrollTrigger.matchMedia({
         "(min-width: 769px)": function () {
           console.log("this is on desktop");
-          
+
           gsap.timeline({
             scrollTrigger: {
               trigger: section.querySelector('.section4inner'),
@@ -774,11 +774,10 @@
     }
 
     // Apply animation to each section
-    window.addEventListener("scroll",()=>{
-      document.querySelectorAll(".section4").forEach((section) => {
-        animateSection(section);
-      });
-    })
+    document.querySelectorAll(".section4").forEach((section) => {
+      animateSection(section);
+    });
+
 
     gsap.from(".animbtn", {
       y: 100,
