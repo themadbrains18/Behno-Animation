@@ -262,8 +262,8 @@
       display: grid;
       grid-template-columns: 50% 50%;
       width: 100%;
-      position: relative;
-      z-index: 10 !important;
+      position: relative; 
+      z-index: 10;
     }
 
     .footer-textcontainer div {
@@ -469,7 +469,7 @@
 
       .gridd {
         grid-template-columns: 0% 100%;
-        z-index: 10 !important;
+        /* z-index: 10 !important; */
       }
 
       .rightside {
@@ -757,14 +757,15 @@
             });
         },
         "all": function () {
-          // This will run for all screen sizes.
-          ScrollTrigger.refresh(); // Refresh scroll triggers on load
+          ScrollTrigger.refresh();
         },
       });
     }
 
     // Apply animation to each section
     document.querySelectorAll(".section4").forEach((section) => {
+      console.log(section,"==============section");
+      
       animateSection(section);
     });
 
