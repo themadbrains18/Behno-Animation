@@ -263,11 +263,16 @@
       grid-template-columns: 50% 50%;
       width: 100%;
       position: relative;
-      z-index: 2;
+      z-index: 10 !important;
     }
 
     .footer-textcontainer div {
       display: inline-block;
+    }
+
+
+    .scrollingtext2 {
+      display: block;
     }
 
     .scrollingtext,
@@ -301,6 +306,9 @@
       display: none;
     }
 
+    .heading-text2-res {
+      display: none;
+    }
 
 
     @media only screen and (max-width: 1150px) {
@@ -738,9 +746,9 @@
             },
           })
             .fromTo(section.querySelector('.section4left'), {
-              backgroundSize: "170%",
+              backgroundSize: "150%",
             }, {
-              backgroundSize: "110%",
+              backgroundSize: "100%",
             });
         },
         "all": function () {
