@@ -100,6 +100,7 @@
       padding-top: 30%;
     }
 
+    /* 
     .left {
       height: 100vh;
       width: 100%;
@@ -107,7 +108,7 @@
       background-position: left;
       background-repeat: no-repeat;
       background-size: cover;
-    }
+    } */
 
     .rightside {
       display: grid;
@@ -171,11 +172,26 @@
     .section4left {
       height: 100vh;
       width: 100%;
+    }
+
+    .imgsec2 {
+      background: url("./images/bggirl1.jpg");
+      background-position: left;
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: left;
+    }
+
+    .imgsec4 {
+      height: 100vh;
+      width: 100%;
+      max-width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
       background-image: url("./images/section3.png");
     }
+
+
 
     /* end */
 
@@ -349,6 +365,23 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
+      }
+
+      .imgsec2 {
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        background-image: url("./images/resbgimg.png");
+      }
+
+      .imgsec4 {
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
         background-image: url("./images/girlimage1.png");
       }
 
@@ -371,7 +404,6 @@
         font-weight: 400;
         line-height: 32.76px;
         text-align: center;
-
       }
 
       .heading-text-bottom-res-section2 {
@@ -397,7 +429,6 @@
         padding-right: 13px;
         padding-left: 14px;
       }
-
 
       .heading-text2 {
         display: none;
@@ -517,6 +548,7 @@
 </head>
 
 <body>
+
   <section class="section">
     <div class="imagebox">
       <div class="bgimageone">
@@ -528,7 +560,6 @@
       style="display: flex; justify-content: center; align-items: center; position:absolute ; top: 0; height: 100vh; width: 100%;">
       <img src="./images/firstsectext.png" class="firstsectext" alt=" firstsectext">
     </div>
-
     <div class="logobox">
       <img src="./images/bhenologo.png" alt="logo">
     </div>
@@ -545,23 +576,22 @@
   <!-- section 2 ===================================== start -->
 
   <section>
-    <div class="parent">
-      <div class="baner-parent">
-        <div class="left">
-          <div class="scrollingtext">
-            <h1 class="heading-text">The epitome of luxury.</h1>
-            <h1 class="heading-text-bottom">SHOP BEHNO SIGNATURES.</h1>
+    <div class="section4">
+      <div class="section4inner">
+        <div class="section4left imgsec2 ">
+          <div class="scrollingtext2">
+            <h1 class="heading-text2">The testament to taste.</h1>
+            <h1 class=" heading-text2 heading-text2-res">The testament to taste.</h1>
+            <h1 class="heading-text-bottom2">SHOP BEHNO SIGNATURES.</h1>
           </div>
         </div>
       </div>
-      <div>
-      </div>
       <div class="gridd">
         <div></div>
-        <div style="position: relative; z-index: 10;">
+        <div>
           <div style="height: fit-content">
             <div class="scrollingtext-res-section2">
-              <h1 class="heading-text-res-section2">The epitome of luxury.</h1>
+              <h1 class="heading-text-res-section2">The testament to taste.</h1>
               <h1 class="heading-text-bottom-res-section2">SHOP BEHNO SIGNATURES.</h1>
             </div>
           </div>
@@ -592,7 +622,7 @@
   <section>
     <div class="section4">
       <div class="section4inner">
-        <div class="section4left">
+        <div class="section4left imgsec4">
           <div class="scrollingtext2">
             <h1 class="heading-text2">The testament to taste.</h1>
             <h1 class=" heading-text2 heading-text2-res">The testament to taste.</h1>
@@ -714,137 +744,48 @@
       }
     })
 
-
-    ScrollTrigger.matchMedia({
-      // Desktop
-      "(min-width: 769px)": function () {
-        const tl = gsap
-          .timeline({
+    // Function to create GSAP scroll animation for a given section
+    function animateSection(section) {
+      ScrollTrigger.matchMedia({
+        "(min-width: 769px)": function () {
+          gsap.timeline({
             scrollTrigger: {
-              trigger: ".baner-parent",
+              trigger: section.querySelector('.section4inner'),
               scrub: 2,
               start: "top top",
               end: "100% center",
             },
           })
-          .to(
-            ".baner-parent",
-            {
+            .to(section.querySelector(".section4inner"), {
               position: "sticky",
               top: 0,
-            },
-            "a"
-          )
-          .to(
-            ".scrollingtext",
-            {
+            }, "b")
+            .to(section.querySelector(".scrollingtext2"), {
               margin: "0",
               duration: 1,
-            },
-            "a"
-          )
-
-        // section 4 ================================================================== gsap
-
-        const tl4 = gsap
-          .timeline({
+            }, "b");
+        },
+        "(max-width: 768px)": function () {
+          gsap.timeline({
             scrollTrigger: {
-              trigger: ".section4inner",
-              scrub: 2,
-              start: "top top",
-              end: "100% center",
-            },
-          })
-          .to(
-            ".section4inner",
-            {
-              position: "sticky",
-              top: 0,
-            },
-            "b"
-          ).to(
-            ".scrollingtext2",
-            {
-              margin: "0",
-              duration: 1,
-            },
-            "b"
-          )
-
-        // section 4 ================================================================== gsap
-      },
-
-
-
-      "(min-width:1250px)": function () {
-        const tl = gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: ".baner-parent",
-              scrub: 2,
-              start: "top top",
-              end: "100% center",
-            },
-          })
-
-        const tl4 = gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: ".section4inner",
-              scrub: 2,
-              start: "top top",
-              end: "100% center",
-            },
-          })
-      },
-
-      "(max-width: 769px)": function () {
-        const tl = gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: ".left",
+              trigger: section.querySelector('.section4left'),
               start: "20% 20%",
               end: "bottom -100%",
               scrub: true,
             },
           })
-          .fromTo(
-            ".left",
-            {
-              backgroundSize: "120%",
-            },
-            {
-              backgroundSize: "100%",
-            },
-            "a"
-          )
-        // .to(".scrollingtext", {
-        //   y: -1100
-        // }, "a")
-
-        const tl2 = gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: ".section4left",
-              start: "20% 20%",
-              end: "bottom -100%",
-              scrub: true,
-            },
-          })
-          .fromTo(
-            ".section4left",
-            {
+            .fromTo(section.querySelector('.section4left'), {
               backgroundSize: "110%",
-            },
-            {
+            }, {
               backgroundSize: "100%",
-            },
-            "b"
-          )
-        // .to(".scrollingtext2", {
-        //   y: -1100
-        // }, "b")
-      },
+            });
+        },
+      });
+    }
+
+    // Apply animation to each section
+    document.querySelectorAll(".section4").forEach((section) => {
+      animateSection(section);
     });
 
     gsap.from(".animbtn", {
