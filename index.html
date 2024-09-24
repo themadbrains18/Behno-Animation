@@ -428,10 +428,17 @@
         flex-direction: column;
       }
 
-      .section4inner {
+      /* .section4inner {
         position: sticky;
         top: 0;
         z-index: 0;
+      } */
+
+      .section4inner {
+        position: -webkit-sticky;
+        /* WebKit prefix for iOS support */
+        position: sticky;
+        top: 0;
       }
 
       .scrollingtext,
@@ -584,10 +591,6 @@
 
 
 
-
-
-
-
   <!-- section 2 ===================================== end -->
 
   <!-- section 3 ===================================== start -->
@@ -737,8 +740,6 @@
     function animateSection(section) {
       ScrollTrigger.matchMedia({
         "(min-width: 769px)": function () {
-          console.log("this is on desktop");
-
           gsap.timeline({
             scrollTrigger: {
               trigger: section.querySelector('.section4inner'),
@@ -818,7 +819,7 @@
       }
     );
 
-    // smouth scroll effect
+    // smouth scroll effect 
 
     gsap.to(".textani", {
       duration: 2,
